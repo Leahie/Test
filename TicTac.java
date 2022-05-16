@@ -9,6 +9,7 @@ public class TicTac
    {
       JFrame frame = new JFrame("TicTacToe");
       frame.setSize(800, 430);
+      
       frame.setLocation(20,20);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       frame.setContentPane(new TicTacToe());
@@ -68,5 +69,15 @@ class TicTacToe extends JPanel
       number1.setHorizontalAlignment(SwingConstants.CENTER);
       eastSubpanel.add(number1);  
       add(eastSubpanel, BorderLayout.EAST);
+      
+      JButton button = new JButton("Reset with a new game!");//this is the thing that like makes it show up 
+      button.addActionListener(new ResetListener());
+      add(button, BorderLayout.SOUTH);
+      
+   public class ResetListener implements ActionListener//this is the listener 
+      {
+      public void actionPerformed (ActionEvent e)
+         {
+   
    }
 }
