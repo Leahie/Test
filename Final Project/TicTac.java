@@ -103,7 +103,7 @@ class Panel extends JPanel{
       myBuffer.setColor(BACKGROUND);
       myBuffer.fillRect(0,0,FRAME,FRAME);
       oSymbol = new O(300, 350);
-      xSymbol = new X(50, 350);
+      xSymbol = new X(35, 320);
       oSymbol.draw(myBuffer);
       xSymbol.draw(myBuffer);
       
@@ -114,7 +114,7 @@ class Panel extends JPanel{
    
   public void reset(){
       oSymbol= new O(300, 350);
-      xSymbol= new X(50, 350);
+      xSymbol= new X(35, 320);
       myBuffer.setColor(BACKGROUND);
       myBuffer.fillRect(0,0,FRAME,FRAME);
       oSymbol.draw(myBuffer);
