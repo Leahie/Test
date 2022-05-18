@@ -70,6 +70,21 @@ class TicTacToe extends JPanel
       number1.setHorizontalAlignment(SwingConstants.CENTER);
       eastSubpanel.add(number1);  
       add(eastSubpanel, BorderLayout.EAST);
+      
+      
+      
+      JButton button = new JButton("Reset with a new game!");//this is the thing that like makes it show up 
+      button.addActionListener(new ResetListener());
+      add(button, BorderLayout.SOUTH);
+          
+   }
+   public class ResetListener implements ActionListener//this is the listener 
+      {
+      public void actionPerformed (ActionEvent e)
+         {
+         graph.reset();
+         }
+   
    }
 }
 
@@ -79,7 +94,7 @@ class Panel extends JPanel{
    private static final Color BACKGROUND = new Color(204, 204, 204);
    private BufferedImage myImage;
    private Graphics myBuffer;
-   private O oSymbol;
+   private O oSymbol;   
    private X xSymbol;
    
    public Panel(){
@@ -87,7 +102,7 @@ class Panel extends JPanel{
       myBuffer = myImage.getGraphics();
       myBuffer.setColor(BACKGROUND);
       myBuffer.fillRect(0,0,FRAME,FRAME);
-      oSymbol = new O(350, 350);
+      oSymbol = new O(300, 350);
       xSymbol = new X(50, 350);
       oSymbol.draw(myBuffer);
       xSymbol.draw(myBuffer);
@@ -98,8 +113,8 @@ class Panel extends JPanel{
    }
    
   public void reset(){
-      oSymbol= new O(25, 350);
-      xSymbol= new X(350, 350);
+      oSymbol= new O(300, 350);
+      xSymbol= new X(50, 350);
       myBuffer.setColor(BACKGROUND);
       myBuffer.fillRect(0,0,FRAME,FRAME);
       oSymbol.draw(myBuffer);
