@@ -10,7 +10,7 @@ public abstract class Symbol{
 
    }  
    /*************************************/ 
-   public abstract void draw(Graphics g,int xV,int yV); //Draws the correct shape 
+   public abstract void draw(Graphics g); //Draws the correct shape 
    /*************************************/
    public void move(int dx,int dy){
       x+=dx;

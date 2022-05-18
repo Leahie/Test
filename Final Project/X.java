@@ -14,7 +14,7 @@ public class X extends Symbol{
       yC = new int[12];
    }
    
-   public void draw(Graphics g, int xV,int yV){
+   public void draw(Graphics g){
       g.setColor(new Color(238, 108, 77));
       xC[0]=x;
       yC[0]=y-15;

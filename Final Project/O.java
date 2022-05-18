@@ -10,11 +10,11 @@ public class O extends Symbol{
       y=yPlace;
    }
    
-   public void draw(Graphics g, int xV,int yV){
+   public void draw(Graphics g){
       g.setColor(new Color(190, 229, 181));
-      g.drawOval(xV, yV, 60, 60);
+      g.drawOval(x, y, 60  , 60);
       g.setColor(new Color(190, 229, 181, 1));
-      g.drawOval(xV, yV, 10, 10);
+      g.drawOval(x, y, 10, 10);
    }
 
 }
