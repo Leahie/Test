@@ -7,10 +7,11 @@ public class Wave implements PowerUps{//implementing the interface, thus u need 
    private int Y;
    private int adX;
    private int adY;
+   private int maxHeight;
    private boolean sign; 
    
    
-   public wave(int xVal, int yVal){
+   public Wave(int xVal, int yVal){
       X=xVal;
       Y=yVal;//basically setable 
       adX=0;//using this to set whether to move the x or y cords up or down, because I'm bouncing I would leave adX the same, while adY would be positive since to go down it needs to go higher
@@ -54,4 +55,12 @@ public class Wave implements PowerUps{//implementing the interface, thus u need 
       }
    
    }
+   public boolean checkMove(){//change this to suit ur situation 
+      if(maxHeight<10){
+         return true;
+      }
+      return false;
+      
+   }
+
 }
