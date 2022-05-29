@@ -148,9 +148,9 @@ class Panel extends JPanel{
       
       //THIS IS THE ARRAY 
       powerup = new PowerUps[7];
-      powerup[0] = new Bounce(-20,-20);//First one set away from the display 
+      powerup[0] = new Bounce(-20,-20);//First one set away from the display BOUNCE
       powerup[1] = new Shake(-20,-20);//Shake
-      //Wave
+      powerup[2] = new Wave(-20, -20)//Wave
       powerup[3] = new Blink(-20,-20);//Blink
 
       for(int x =160; x < 250; x+=80)  //Use a loop to draw equally spaced identical shapes; note x+=10 not x+=1.
@@ -216,7 +216,8 @@ class Panel extends JPanel{
          //This is for bounce, replace powerup[0] with bounce in ur mind because that's what it is in the array
          powerup[0].changeXY(50,50);
          powerup[0].changeadY(5); //cause it to start to go down
-         
+         powerup[2].changeXY(50,50);
+         powerup[2].changeadY(5);
       }
       if (checkWin()==1){
          reset();
@@ -224,6 +225,7 @@ class Panel extends JPanel{
          powerup[1].changeXY(50,50);
          powerup[1].changeadY(5); //cause it to start to go down
          powerup[1].changeadX(-5);
+         
          //BLINK
          powerup[3].changeXY(50,50);
          powerup[3].changeadY(0); //cause it to start to go down
@@ -238,12 +240,18 @@ class Panel extends JPanel{
       //POWERUP SECTION 
       if(powerup[0].checkMove()){//This checks if Max height is too small thus if the thing is beginning to end
          powerup[0].changeXY(-20,-20);
-         powerup[0].changeadY(0);         //setting it away and back to normal once everything is completed 
+         powerup[0].changeadY(0);  //setting it away and back to normal once everything is completed
+         }       
+         if(powerup[2].checkMove()){//This checks if Max height is too small thus if the thing is beginning to end
+         powerup[2].changeXY(-20,-20);
+         powerup[2].changeadY(0);    
       }
       powerup[0].move();
       powerup[0].draw(myBuffer);
       powerup[1].move();
       powerup[1].draw(myBuffer);
+      powerup[2].move();
+      powerup[2].draw(myBuffer);
       powerup[3].move();
       powerup[3].draw(myBuffer);
       
