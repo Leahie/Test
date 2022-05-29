@@ -216,6 +216,8 @@ class Panel extends JPanel{
          //This is for bounce, replace powerup[0] with bounce in ur mind because that's what it is in the array
          powerup[0].changeXY(50,50);
          powerup[0].changeadY(5); //cause it to start to go down
+         powerup[2].changeadY(5); //  
+         powerup[2].changeadY(5); //   
          powerup[2].changeXY(50,50);
          powerup[2].changeadY(5);
       }
@@ -241,10 +243,7 @@ class Panel extends JPanel{
       if(powerup[0].checkMove()){//This checks if Max height is too small thus if the thing is beginning to end
          powerup[0].changeXY(-20,-20);
          powerup[0].changeadY(0);  //setting it away and back to normal once everything is completed
-         }       
-      powerup[2].changeXY(-20,-20);
-      powerup[2].changeadY(5); //  
-      powerup[2].changeadY(5); //    
+         }        
       powerup[0].move();
       powerup[0].draw(myBuffer);
       powerup[1].move();
