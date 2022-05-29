@@ -48,9 +48,9 @@ public class Wave implements PowerUps{//implementing the interface, thus u need 
          if(sign == true){ 
             adY= 5; 
          }
-      }
-      else{
-         adX=-5;
+         else{
+            adX=-5;
+         }
       }
    
    }
