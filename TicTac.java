@@ -150,7 +150,7 @@ class Panel extends JPanel{
       powerup = new PowerUps[7];
       powerup[0] = new Bounce(-20,-20);//First one set away from the display BOUNCE
       powerup[1] = new Shake(-20,-20);//Shake
-      powerup[2] = new Wave(-20, -20)//Wave
+      powerup[2] = new Wave(-20, -20);//Wave
       powerup[3] = new Blink(-20,-20);//Blink
 
       for(int x =160; x < 250; x+=80)  //Use a loop to draw equally spaced identical shapes; note x+=10 not x+=1.
@@ -242,10 +242,9 @@ class Panel extends JPanel{
          powerup[0].changeXY(-20,-20);
          powerup[0].changeadY(0);  //setting it away and back to normal once everything is completed
          }       
-         if(powerup[2].checkMove()){//This checks if Max height is too small thus if the thing is beginning to end
-         powerup[2].changeXY(-20,-20);
-         powerup[2].changeadY(0);    
-      }
+      powerup[2].changeXY(-20,-20);
+      powerup[2].changeadY(5); //  
+      powerup[2].changeadY(5); //    
       powerup[0].move();
       powerup[0].draw(myBuffer);
       powerup[1].move();
