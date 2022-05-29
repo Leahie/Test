@@ -7,8 +7,7 @@ public class Wave implements PowerUps{//implementing the interface, thus u need 
    private int Y;
    private int adX;
    private int adY;
-   //this is for Bounce u might not need it
-   private int maxHeight;
+
    
    
    public Bounce(int xVal, int yVal){
@@ -38,24 +37,17 @@ public class Wave implements PowerUps{//implementing the interface, thus u need 
    }
 
    public void draw(Graphics myBuffer){ //Redraw during every animation frame
-      if(X%20==0){ 
-         adX= 5; 
-         myBuffer.fillRect(X, Y, 20, 20);
-      }
-      else {
-         adX = -5; 
-         myBuffer.fillRect(X, Y, 20, 20);
-      }
+      myBuffer.fillRect(X, Y, 20, 20);
+     
    }
    public void move(){//this is whether or not it should move
       X+=adX;
       Y+=adY;
-      if(Y<10){
-         maxHeight=maxHeight/2;
-         adY=5;
+      if(X%20==0){ 
+         adX= 5; 
       }
-      else if(Y>maxHeight){
-         adY=-5;
+      else{
+         adX=-5;
       }
    
    }
