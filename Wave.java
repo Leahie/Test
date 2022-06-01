@@ -34,7 +34,7 @@ public class Wave implements PowerUps{//implementing the interface, thus u need 
    public void changeXY(int xVal, int yVal){
       X=xVal;
       Y=yVal;
-      maxHeight=400;
+      
    
    }
 
@@ -47,10 +47,13 @@ public class Wave implements PowerUps{//implementing the interface, thus u need 
       Y+=adY;
       if(X%20==0){ 
          if(sign == true){ 
-            adY= 5; 
+            adY= -5;
+            sign = false;
          }
          else{
-            adX=-5;
+            adY=5;
+            sign = true;
+
          }
       }
    
